@@ -11,10 +11,10 @@ function loader(element) {
 
     loadInterval = setInterval(() => {
         // اثناء ما يكون قعد يكتب يظهر ليك النص التالي
-        element.textContent += '.';
+        element.textContent += ' ';
 
         // لو الاستجابة طولت تظهر لك النقاط دي للانتظار
-        if (element.textContent === '.') {
+        if (element.textContent === '...') {
             element.textContent = ' ';
         }
     }, 300);
