@@ -7,7 +7,7 @@ const chatContainer = document.querySelector('#chat_container')
 let loadInterval
 
 function loader(element) {
-    element.textContent = 'أصبر شوية...'
+    element.textContent = '...أصبر شوية'
 
     loadInterval = setInterval(() => {
         // اثناء ما يكون قعد يكتب يظهر ليك النص التالي
