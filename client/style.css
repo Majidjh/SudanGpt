@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
 
 header {
-  text-align: center;
-  background-color: #3b383b;
-  width: 100%;
-  position: fixed;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  padding: 10px 200px;
+  background: #3b383b;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 header img {
@@ -31,13 +33,24 @@ header h1{
   font-size: 1.8em;
 }
 
-nav a{
-  color: aqua;
+header a{
   text-decoration: none;
-  font-size: 1.1em;
-  font-weight: 500;
-  padding-left: 600px;
+  color: #fff;
+}
 
+nav{
+  margin-left: 820px;
+}
+
+nav a{
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+nav a:hover{
+  color: #ff0000;
 }
 
 body {
@@ -189,7 +202,7 @@ form img {
   }
 
   nav a{
-    padding-left: 85px;
+    padding-left: 10px;
   }
 
   header h1{
