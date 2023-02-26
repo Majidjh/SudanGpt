@@ -107,7 +107,7 @@ const handleSubmit = async (e) => {
     } else {
         const err = await response.text()
 
-        messageDiv.innerHTML = "شكلو في مشكلة في شبكتك كدي كشف لي التنشيط بتاعك احتمال أنتهى"
+        messageDiv.innerHTML = "معليش حاليا في صيانة في الموقع 😊🙏"
         alert(err)
     }
 }
