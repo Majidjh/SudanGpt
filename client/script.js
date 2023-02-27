@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://sudangpt.onrender.com', {
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -97,18 +97,18 @@ const handleSubmit = async (e) => {
     })
 
     clearInterval(loadInterval)
-    messageDiv.innerHTML = " "
+    messageDiv.innerHTML = " ";
 
     if (response.ok) {
         const data = await response.json();
-        const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
+        const parsedData = data.bot.trim(); // trims any trailing spaces/'\n' 
 
-        typeText(messageDiv, parsedData)
+        typeText(messageDiv, parsedData);
     } else {
-        const err = await response.text()
+        const err = await response.text();
 
-        messageDiv.innerHTML = "معليش حاليا في صيانة في الموقع 😊🙏"
-        alert(err)
+        messageDiv.innerHTML = "❤️🙏معليش في مشكلة بشيط لكن ماعليك هتتحل ان شاء الله";
+        alert(err);
     }
 }
 
