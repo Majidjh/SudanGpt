@@ -5,6 +5,8 @@ import { Configuration, OpenAIApi } from 'openai'
 
 dotenv.config()
 
+console.log(process.env.OPENAI_API_KEY)
+
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -17,7 +19,7 @@ app.use(express.json())
 
 app.get('/', async (req, res) => {
   res.status(200).send({
-    message: 'ياهلا بيك والله حبيبنا اللزم'
+    message: 'حبابك والله حبيبنا اللزم'
   })
 })
 
@@ -41,7 +43,7 @@ app.post('/', async (req, res) => {
 
   } catch (error) {
     console.error(error)
-    res.status(500).send(error || 'عندك مشكلة في شبكتك. كدي كشف للتنشيط بتاعك يمكن أنتهي');
+    res.status(500).send(error || '🙏❤️في مشكلة بسيطه لكن ما عليك هتتحل ان شاء الله');
   }
 })
 
